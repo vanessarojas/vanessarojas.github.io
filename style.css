@@ -1,93 +1,51 @@
-/* styles.css */
-
-/* Global styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
 }
-
-/* Header styles */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	background-color: #333;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
 }
-
 header h1 {
-  margin: 0;
+	margin: 0;
 }
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav li {
-  margin-right: 20px;
-}
-
-nav li:last-child {
-  margin-right: 0;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-nav a:hover {
-  background-color: #fff;
-  color: #333;
-}
-
-/* Main content styles */
 main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+	padding: 20px;
 }
-
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+#books {
+	margin-bottom: 30px;
 }
-
-.book-list {
-  display: flex;
-  flex-wrap: wrap;
+#books ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
-
-article {
-  width: 45%;
-  margin-right: 5%;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
+#books li {
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	padding: 10px;
 }
-
-article:last-child {
-  margin-right: 0;
+#books h3 {
+	margin-top: 0;
 }
-
-article img {
-  max-width: 100%;
-  margin-bottom: 10px;
+#books button {
+	background-color: #008CBA;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
 }
-
-article h3 {
-  margin: 0;
+#books button:hover {
+	background-color: #005D7E;
 }
-
-article p {
-  font-size: 14px;
-  margin-bottom: 10px
+footer {
+	background-color: #333;
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
