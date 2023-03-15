@@ -1,31 +1,42 @@
-let cartItems = [];
+// Initialize an empty shopping cart array
+var shoppingCart = [];
 
-function addToCart(item) {
-	// Check if the item is already in the cart
-	for (let i = 0; i < cartItems.length; i++) {
-		if (cartItems[i].item === item) {
-			cartItems[i].quantity++;
-			updateCart();
-			return;
-		}
-	}
-	
-	// Add the item to the cart
-	cartItems.push({item: item, quantity: 1});
-	updateCart();
+// Define a function to add an item to the shopping cart
+function addToCart(itemName, itemPrice) {
+  var item = {
+    name: itemName,
+    price: itemPrice
+  };
+  shoppingCart.push(item);
+  console.log(itemName + " added to cart.");
 }
 
-function updateCart() {
-	let cartList = document.getElementById('cart-items');
-	cartList.innerHTML = '';
-	
-	// Loop through the cart items and add them to the cart list
-	for (let i = 0; i < cartItems.length; i++) {
-		let cartItem = document.createElement('li');
-		let item = cartItems[i].item;
-		let quantity = cartItems[i].quantity;
-		
-		cartItem.innerHTML = item + ' x ' + quantity;
-		cartList.appendChild(cartItem);
-	}
+// Define a function to display the contents of the shopping cart
+function displayCart() {
+  console.log("Shopping Cart:");
+  for (var i = 0; i < shoppingCart.length; i++) {
+    console.log(shoppingCart[i].name + " - $" + shoppingCart[i].price);
+  }
 }
+
+// Define a function to calculate the total cost of items in the shopping cart
+function calculateTotal() {
+  var total = 0;
+  for (var i = 0; i < shoppingCart.length; i++) {
+    total += shoppingCart[i].price;
+  }
+  return total;
+}
+
+// Define a function to checkout and display the total cost
+function checkout() {
+  var total = calculateTotal();
+  console.log("Total cost: $" + total.toFixed(2));
+  shoppingCart = [];
+}
+
+// Example usage:
+addToCart("Book 1", 10.99);
+addToCart("Book 2", 12.99);
+displayCart();
+checkout();
