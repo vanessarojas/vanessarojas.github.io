@@ -8,8 +8,8 @@ for (var i = 0; i < addToCartButtons.length; i++) {
 }
 
 // Get the "Checkout" button and add an event listener to it
-var checkoutButton = document.getElementById("checkout");
-checkoutButton.addEventListener("click", checkout);
+var checkoutButton1 = document.getElementById("checkout");
+checkoutButton1.addEventListener("click", checkout);
 
 // Define a function to add an item to the shopping cart
 function addToCart() {
