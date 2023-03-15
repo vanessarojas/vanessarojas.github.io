@@ -54,3 +54,16 @@ for (var i = 0; i < shoppingCart.length; i++) {
 var totalPriceCell = document.getElementById("total-price");
 totalPriceCell.textContent = "$" + totalPrice.toFixed(2);
 
+// Get the checkout button element
+const checkoutButton = document.getElementById('checkout-button');
+
+// Add a click event listener to the button
+checkoutButton.addEventListener('click', () => {
+  // Code for adding items to the cart
+  // ...
+
+  // Navigate to the checkout page
+  window.location.href = 'checkout.html';
+});
+
+
