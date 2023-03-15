@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bookstore</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <title>Bookstore</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<header>
-		<h1>Bookstore</h1>
-		<a href="#" id="cart-link">Cart</a>
-	</header>
-	<main>
-		<section id="books">
-			<h2>Books</h2>
-			<ul>
-				<li>
-					<h3>Book 1</h3>
-					<p>Price: $10.99</p>
-					<button class="add-to-cart">Add to Cart</button>
-				</li>
-				<li>
-					<h3>Book 2</h3>
-					<p>Price: $12.99</p>
-					<button class="add-to-cart">Add to Cart</button>
-				</li>
-				<li>
-					<h3>Book 3</h3>
-					<p>Price: $8.99</p>
-					<button class="add-to-cart">Add to Cart</button>
-				</li>
-			</ul>
-		</section>
-	</main>
-	<footer>
-		<p>&copy; 2023 Bookstore</p>
-	</footer>
-	<script src="script.js"></script>
+  <div class="container">
+    <h1>Bookstore</h1>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <img src="book1.jpg" alt="Book 1" class="book-img">
+          <h3>The Great Gatsby</h3>
+          <p class="price">$10.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="book2.jpg" alt="Book 2" class="book-img">
+          <h3>To Kill a Mockingbird</h3>
+          <p class="price">$12.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <button id="checkout">Checkout</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
