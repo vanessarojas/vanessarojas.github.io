@@ -29,3 +29,28 @@ function checkout() {
   }
   alert("Your total price is $" + totalPrice.toFixed(2));
 }
+
+// Get a reference to the cart items element
+var cartItems = document.getElementById("cart-items");
+
+// Loop through the items in the shopping cart and add them to the table
+for (var i = 0; i < shoppingCart.length; i++) {
+  var item = shoppingCart[i];
+  var row = document.createElement("tr");
+  var titleCell = document.createElement("td");
+  titleCell.textContent = item.title;
+  var priceCell = document.createElement("td");
+  priceCell.textContent = "$" + item.price.toFixed(2);
+  row.appendChild(titleCell);
+  row.appendChild(priceCell);
+  cartItems.appendChild(row);
+}
+
+// Calculate and display the total price of all the items in the shopping cart
+var totalPrice = 0;
+for (var i = 0; i < shoppingCart.length; i++) {
+  totalPrice += shoppingCart[i].price;
+}
+var totalPriceCell = document.getElementById("total-price");
+totalPriceCell.textContent = "$" + totalPrice.toFixed(2);
+
