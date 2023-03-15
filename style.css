@@ -1,32 +1,93 @@
+/* styles.css */
+
+/* Global styles */
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+/* Header styles */
 header {
-	background-color: #333;
-	color: #fff;
-	padding: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1 {
-	margin: 0;
+header h1 {
+  margin: 0;
 }
 
 nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 nav li {
-	float: left;
+  margin-right: 20px;
 }
 
-nav li a {
-	display: block;
-	color: #fff;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Main content styles */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article {
+  width: 45%;
+  margin-right: 5%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+article:last-child {
+  margin-right: 0;
+}
+
+article img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+article h3 {
+  margin: 0;
+}
+
+article p {
+  font-size: 14px;
+  margin-bottom: 10px
