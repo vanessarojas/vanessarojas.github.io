@@ -90,3 +90,8 @@ header {
 #close-btn:hover {
 	background-color: #666;
 }
+
+#email-subject-line {
+	color: orange;
+	front-style: italic;
+}
