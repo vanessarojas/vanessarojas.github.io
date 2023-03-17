@@ -93,5 +93,9 @@ header {
 
 #email-subject-line {
 	color: orange;
-	front-style: italic;
+	font-style: italic;
+}
+#text-message-line {
+	color: yellow;
+	font-style: italic;
 }
